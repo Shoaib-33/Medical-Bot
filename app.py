@@ -15,9 +15,6 @@ load_dotenv()
 PINECONE_API_KEY = os.environ.get('PINECONE_API_KEY')
 GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY')
 
-os.environ["PINECONE_API_KEY"] = PINECONE_API_KEY
-os.environ["GOOGLE_API_KEY"] = GEMINI_API_KEY  # ✅ langchain-google-genai reads this env var
-
 embeddings = download_hugging_face_embeddings()
 
 index_name = "medical-chatbot"
